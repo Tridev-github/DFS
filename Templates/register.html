@@ -1,0 +1,23 @@
+{% load static %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <script src="{% static 'register-check.js' %}"></script>
+</head>
+<body>
+    <form action="login" class="login_form">
+            <input type=submit value="Login">
+    </form>
+    <form action="register_user" onsubmit="return check()" method="POST">
+        {% csrf_token %}
+        <p>Name:</p><input type=text name="name"><br>
+        <p>Password:</p><input type=password name="pass1" id="p1"><br>
+        <p>re-enter Password:</p><input type=password id="p2" name="pass2"><br><br>
+        <input type=submit value="Register" name="sub" id="s">
+        <br><br>
+        <b>{{register_sucess}}</b>
+        <h4>{{register_error}}</h4>
+    </form>
+</body>
+</html>

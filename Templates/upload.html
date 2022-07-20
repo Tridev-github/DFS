@@ -1,0 +1,18 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+    </head>
+    <body>
+        <h3 class="login_name">WELCOME {{username}}</h3>
+        <form action="">
+            <input type="submit" value="Chat">
+        </form>
+        <form action="send_file" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="sent_file"><br><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

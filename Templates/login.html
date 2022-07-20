@@ -1,0 +1,19 @@
+{% load static %}
+
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+</head>
+<body>
+    <form action="register" class="login_form">
+        <input type=submit value="Register">
+    </form>
+    <form action="user_login" method="POST">
+        {% csrf_token %}
+        <p>Name:</p><input type=text name="name"><br>
+        <p>Password:</p><input type=password name="pass"><br><br>
+        <input type=submit value="Login"><br><br>
+        <h4>{{login_error}}</h4>
+    </form>
+</body>
+</html>
