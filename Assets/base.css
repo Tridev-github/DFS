@@ -1,0 +1,25 @@
+html{
+    position:absolute;
+    left:45vw;
+    bottom:25vh;
+    background-color:lightgrey;
+}
+
+input[type = submit] {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    margin: 20px 20px;
+    cursor: pointer;
+    font-size:15px;
+    width:90px;
+    text-align:center;
+}
+
+b{
+    color:white;
+    background-color:green;
+    padding:10px 10px;
+}
+
